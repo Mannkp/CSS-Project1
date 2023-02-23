@@ -8,6 +8,7 @@ body{
     /* background-color: #97dffc; */
     background-color: #60a9ff;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 header nav ul{
     top: 0px;
@@ -18,12 +19,18 @@ header nav ul{
 }
 header nav ul li , ul{
     list-style-type: none;
+    line-height: 1.5;
 }
 section ul{
     padding: 1em;
 }
+section ul li:last-child{
+    /* padding: 1em 0; */
+    /* border-top: 2px solid #ced4da; */
+    border-bottom: 2px solid #888;
+}
 section ul li{
-    padding: 1em;
+    padding: 1em 0;
     /* border-top: 2px solid #ced4da; */
     border-top: 2px solid #888;
 }
@@ -39,6 +46,7 @@ a:visited{
     text-decoration: none;
 }
 a:hover{
+    transition: color 400ms ease-in-out;
     color:white;
 }
 
@@ -47,7 +55,7 @@ main{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    flex: 1 2 70%;
+    /* flex: 1 2 70%; */
     /* flex-wrap: wrap; */  
     background-color: white;
     /* border: 0px solid black; */
@@ -88,20 +96,36 @@ h2{
 #s1 a, #s2 a, #s3 a{
     padding: 10px 10px;
     margin: 10px 10px;
-    border: 2px solid #016ff9;
-    font-size: 1.2em;
+    border: 1px solid #9dd1ff;
+    text-decoration: none;
+    /* font-size: 1.2em; */
+    display: inline-block;
     border-radius: 10px;
     box-sizing: border-box;
+    color: #348efe;
+    transition: background-color 200ms ease-in-out;
 }
 section a:link{
-    color: #016ff9;
+    color: #348efe;
 }
 #a2{
     background-color: #016ff9;
-    color: white;
+    color: white !important;
 }
-section a:hover{
-    color: blueviolet;
+section a:hover , section a:focus{
+    background-color: #e1f1ff;
+    /* color: blueviolet; */
+}
+#a2:hover , #a2:focus{
+    background-color: #269aff;
+}
+section p{
+    color: #016ff9;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin:10px;
+    margin-top: 30px;
 }
 
 @media (max-width:600px){
@@ -179,17 +203,20 @@ section a:hover{
         padding-right: 0px;
         width: 90%;
         color: #016ff9;
+        border-bottom: 1px solid #e1f1ff;
     }
     #s1{
         margin-top: 20px;
     }
     #s1 a, #s2 a, #s3 a{
-        padding: 10px 10px;
-        margin: 10px 10px;
+        padding: 15px 35px;
+        margin: 25px 0px;
         border: 2px solid #016ff9;
         font-size: 1em;
         border-radius: 10px;
         box-sizing: border-box;
+        color: #348efe;
+        transition: background-color 200ms ease-in-out;
     }
     section a:link{
         color: #016ff9;

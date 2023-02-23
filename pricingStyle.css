@@ -55,7 +55,7 @@ main{
     /* height: 70vh; */
     min-height: 10vh;
     margin: 9vh auto;
-    padding: 1em 2em;
+    padding: 4em 2em;
     box-sizing: border-box;
     max-width: 960px;
 }
